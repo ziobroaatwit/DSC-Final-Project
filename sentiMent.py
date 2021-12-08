@@ -8,8 +8,8 @@ def createAndTest():
     df = pd.read_csv(r'training_data.csv')
     df = shuffle(df)
 
-    X = df.iloc[:7000,5]
-    y = df.iloc[:7000,0]
+    X = df.iloc[:1600000,5]
+    y = df.iloc[:1600000,0]
 
     X_train, X_test, y_train, y_test  = train_test_split(X, y, train_size=0.75, random_state=1234, shuffle=True)
 
@@ -32,6 +32,7 @@ def posOrNeg(sentence):
         return "Positive"
 
 def main():
+    #createAndTest() latest accuracy score 0.7817575
     senti = input("Enter text to be analyzed: ")
     print(posOrNeg(senti))
 
