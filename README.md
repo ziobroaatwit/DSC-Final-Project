@@ -13,10 +13,10 @@ A pipeline was used for feature extraction to feed into the model as the number 
 
 The model was then saved via joblib so that it could be used to deploy the model onto a Raspberry Pi Zero W.
 
-##Methods##
+##Methods
 
-##Results##
+##Results
 
-##Discussion##
+##Discussion
 
-##Summary##
+##Summary
