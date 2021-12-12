@@ -13,20 +13,20 @@ Our group used a TF-IDF Vectorizer to tokenize the words of the tweets out to a 
 
 A pipeline was used for feature extraction to feed into the model as the number of features would vary based on the amount of words in the tweets. 
 
-The model was then saved via joblib so that it could be used to deploy the model onto a Raspberry Pi Zero W.
+The model was then saved via joblib so that it could be used to deploy the model to other devices without recalculating the massive amount of data.
 
 ## Methods
 Tools: 
 -Scikit-learn (and by extension NumPy), Pandas for data analysis.
 -Visual Studio Code as main IDE, Jupyter Notebook for immediate testing. 
--Raspberry Pi Zero W for "deployment".
 
 Scikit-learn features:
 -Bernoulli Naive Bayes Classifier
 -TF-IDF Vectorizer for word tokenization.
 -Pipeline for feature extraction and feeding the classifier the right stuff. 
 ## Results
-<Insert Pi Usage Photos Here LOL Don't Got Em Yet>
+![image](https://user-images.githubusercontent.com/54987160/145731986-f6d84d09-e3c7-4e22-80e0-f251640eba8d.png)
+
 ## Discussion
 One of the first things that was noticed with this model is that it's accuracy is already decently high from the beginning with just a small sample set. Due to memory constraints we initially created models with only 5000 or 7000 total tweets. Despite these small numbers some of our first accuracy numbers were averaging around 70%! Once it was moved to a machine with far more ram and horsepower behind it we threw in all 1.6 million tweets into the mix and managed to process it all, it raised our accuracy score to a totally respectable 0.7817575% All of that with only a mathematical model and no natural language processing. Taking a look at other examples tackling this problem across the internet and many were only getting scores of around 50% which makes this a great turnout. 
 
@@ -39,6 +39,8 @@ Further more, a shortcoming of our data set comes from a quality issue. The data
 Another constraint with processing such massive amounts of data became RAM usage. The final resulting model itself is very small at around 40MB, but the CSV used to train it is almost 3 times as large and once you start including processing it all we actually couldn't process all 1.6 million on the Razer Blade 15 at first. 
 ## Summary
 This project deploys a supervised classification model to predict sentiment score of phrases/future tweets using two categorial features, but a variable number of actual features due to TF-IDF vectorization. 
-
-The script is deployed on a Raspberry Pi Zero W as is. 
 ## References
+
+[Creating a pipeline for TF-IDF Vectorizers](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
+[How to create a Scikit pipeline for TF-IDF Vectorizer?](https://stackoverflow.com/questions/63662308/how-to-create-a-scikit-pipeline-for-tf-idf-vectorizer)
+[Kaggle Sentiment140 Dataset](https://www.kaggle.com/kazanova/sentiment140)
