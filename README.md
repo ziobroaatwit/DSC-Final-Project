@@ -41,6 +41,8 @@ Another constraint with processing such massive amounts of data became RAM usage
 This project deploys a supervised classification model to predict sentiment score of phrases/future tweets using two categorial features, but a variable number of actual features due to TF-IDF vectorization. 
 ## References
 
-[Creating a pipeline for TF-IDF Vectorizers](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
+[Creating a pipeline for TF-IDF Vectorizers](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)'
+
 [How to create a Scikit pipeline for TF-IDF Vectorizer?](https://stackoverflow.com/questions/63662308/how-to-create-a-scikit-pipeline-for-tf-idf-vectorizer)
+
 [Kaggle Sentiment140 Dataset](https://www.kaggle.com/kazanova/sentiment140)
