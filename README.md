@@ -47,3 +47,5 @@ This project deploys a supervised classification model to predict sentiment scor
 [How to create a Scikit pipeline for TF-IDF Vectorizer?](https://stackoverflow.com/questions/63662308/how-to-create-a-scikit-pipeline-for-tf-idf-vectorizer)
 
 [Kaggle Sentiment140 Dataset](https://www.kaggle.com/kazanova/sentiment140)
+
+[Why Bernoulli?](https://iq.opengenus.org/bernoulli-naive-bayes/)
