@@ -1,9 +1,9 @@
 # DSC-Final-Project
 ## Introduction
-The objective of this project is to demonstrate the use of machine learning to train on a data set of tweets tagged with sentiment scores, and predict the sentiment of future tweets. Our group was curious whether any semblence of accurate prediction was possible without the use of natual language processing.
+The objective of this project is to demonstrate the use of machine learning to train on a data set of tweets tagged with sentiment scores, and predict the sentiment of future tweets. Our group was curious whether any semblence of accurate prediction was possible without the use of natual language processing. We found that you can make correct very often (>70% accuracy) with a mathematical model alone. 
 
 ## Selection of Data
-The model processing and training were conducted using Scikit and Pandas using a dataset of 1.6 million tweets obtained from [Kaggle](https://www.kaggle.com/kazanova/sentiment140). The data features a sentiment value, tweet ID, date, query flag, username, and the text contained in the tweet. 
+The model processing and training were conducted using Scikit and Pandas using a dataset of 1.6 million tweets obtained from [Kaggle](https://www.kaggle.com/kazanova/sentiment140). The data features a sentiment value, tweet ID, date, query flag, username, and the text contained in the tweet. We pulled the sentiment value and tweet text as the relevant variables from the data set and left the rest of the columns untouched as we felt the tweet ID, date, query flag and usernames were irrelevant to our goal. 
 
 ## Data Preview
 
@@ -26,6 +26,7 @@ Scikit-learn features:
 -Pipeline for feature extraction and feeding the classifier the right stuff. 
 ## Results
 ![image](https://user-images.githubusercontent.com/54987160/145731986-f6d84d09-e3c7-4e22-80e0-f251640eba8d.png)
+Our results show that you can effectively estimate the sentiment of a phrase based on past data. 
 
 ## Discussion
 One of the first things that was noticed with this model is that it's accuracy is already decently high from the beginning with just a small sample set. Due to memory constraints we initially created models with only 5000 or 7000 total tweets. Despite these small numbers some of our first accuracy numbers were averaging around 70%! Once it was moved to a machine with far more ram and horsepower behind it we threw in all 1.6 million tweets into the mix and managed to process it all, it raised our accuracy score to a totally respectable 0.7817575% All of that with only a mathematical model and no natural language processing. Taking a look at other examples tackling this problem across the internet and many were only getting scores of around 50% which makes this a great turnout. 
@@ -38,7 +39,7 @@ Further more, a shortcoming of our data set comes from a quality issue. The data
 
 Another constraint with processing such massive amounts of data became RAM usage. The final resulting model itself is very small at around 40MB, but the CSV used to train it is almost 3 times as large and once you start including processing it all we actually couldn't process all 1.6 million on the Razer Blade 15 at first. 
 ## Summary
-This project deploys a supervised classification model to predict sentiment score of phrases/future tweets using two categorial features, but a variable number of actual features due to TF-IDF vectorization. 
+This project deploys a supervised classification model to predict sentiment score of phrases/future tweets using two categorial features, but a variable number of actual features due to TF-IDF vectorization. We were able to successfuly determine whether future phrases were negative or positive in meaning for >70% of inputs. 
 ## References
 
 [Creating a pipeline for TF-IDF Vectorizers](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
